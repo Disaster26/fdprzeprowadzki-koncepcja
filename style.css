@@ -243,3 +243,13 @@ figure{margin:0}
   .logo img{height:34px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* tablet pionowo: zdjecie nad tekstem */
+@media (min-width:761px) and (max-width:1040px) and (orientation:portrait){
+  .hero{display:flex;flex-direction:column}
+  .hero-foto{position:relative;flex:1 1 0;min-height:30svh;max-height:60svh;align-self:stretch;width:100%}
+  .hero-foto img{object-position:50% 50%}
+  .hero-foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(rgba(238,243,248,0),var(--tlo))}
+  .hero-in{flex:0 0 auto;padding:12px 40px 48px}
+  .hero-in>*{max-width:640px}
+}
