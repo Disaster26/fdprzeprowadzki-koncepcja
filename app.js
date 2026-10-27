@@ -53,10 +53,11 @@
     });
   }
 
-  // Formularz w wizualizacji niczego nie wysyla
-  var form = document.getElementById('form');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    document.getElementById('fInfo').hidden = false;
+  // Formularze w wizualizacji niczego nie wysylaja
+  Array.prototype.forEach.call(document.querySelectorAll('.js-form'), function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      f.querySelector('.f-info').hidden = false;
+    });
   });
 })();
